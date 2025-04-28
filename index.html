@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torneio Relâmpago Aviator | 7K BET</title>
+    <meta name="description" content="Participe do torneio mais emocionante com prêmios de até R$300.000! Jogos de cassino, e-sports e muito mais.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #007BFF;
+            --secondary-color: #0056b3;
+            --accent-color: #FFD700;
+            --dark-color: #1a1a2e;
+            --light-color: #f4f4f9;
+            --success-color: #28a745;
+            --danger-color: #dc3545;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light-color);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 1rem;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+        
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .auth-buttons .btn {
+            margin-left: 1rem;
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .auth-buttons .btn-login {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+        
+        .auth-buttons .btn-login:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .auth-buttons .btn-register {
+            background-color: var(--primary-color);
+            color: white;
+            border: 1px solid var(--primary-color);
+        }
+        
+        .auth-buttons .btn-register:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        .banner {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1518895949257-7621c3c786d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+            position: relative;
+        }
+        
+        .banner-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .banner h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .banner p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            background-color: #ffc107;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
+        }
+        
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .game-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            
+            animation: none;
+
+        }
+        
+        .game-card:hover {
+  animation: none;
+  transform: translateY(-10px) scale(1.02);
+}
+        
+        .game-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            animation: pulse 1.5s infinite
+        }
+        
+        .game-info {
+            padding: 1rem;
+        }
+        
+        .game-title {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            animation: pulse 1.5s infinite
+        }
+        
+        .game-category {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            animation: pulse 1.5s infinite
+        }
+        
+        .game-play {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+            animation: glow 2s infinite alternate;
+  position: relative;
+  overflow: hidden;
+  animation: pulse 1.5s infinite
+        }
+        
+        .game-play:hover {
+            background-color: var(--secondary-color);
+            animation: pulse 1.5s infinite
+        }
+        
+        .tournament-highlight {
+            background: linear-gradient(135deg, var(--secondary-color), var(--dark-color));
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .tournament-highlight h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tournament-highlight p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .countdown-item {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 0.8rem;
+            border-radius: 4px;
+            min-width: 70px;
+        }
+        
+        .countdown-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .countdown-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+        
+        .prize-pool {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+        
+        .category {
+            background-color: var(--light-color);
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .category:hover, .category.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .live-games {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 2rem 0;
+        }
+        
+        .live-games .section-title::after {
+            background-color: var(--accent-color);
+        }
+        
+        .live-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--danger-color);
+            color: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            animation: pulse 1.5s infinite;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .feature h3 {
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 1rem 1rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-color);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        .payment-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .payment-methods img {
+            height: 30px;
+            filter: grayscale(100%) brightness(2);
+            opacity: 0.7;
+            transition: all 0.3s;
+        }
+        
+        .payment-methods img:hover {
+            filter: grayscale(0) brightness(1);
+            opacity: 1;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-links li {
+                margin: 0.5rem;
+            }
+            
+            .auth-buttons {
+                margin-top: 1rem;
+            }
+            
+            .banner h2 {
+                font-size: 2rem;
+            }
+            
+            .games-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+        
+        /* Animations */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Tournament specific styles */
+        .tournament-leaderboard {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+        
+        .tournament-leaderboard th, 
+        .tournament-leaderboard td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .tournament-leaderboard th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .tournament-leaderboard tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .tournament-leaderboard tr:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .player-rank {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .player-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+        
+        .player-name {
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            animation: modalFadeIn 0.3s;
+        }
+        
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+        }
+        
+        .modal-title {
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .form-submit {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .form-submit:hover {
+            background-color: var(--secondary-color);
+        }
+        .ad-section {
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 1200px;
+}
+
+.ad-sponsor {
+    margin: 2rem 0;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.ad-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .ad-desktop {
+        display: none;
+
+    /* ============ ANIMAÇÕES AUTOMÁTICAS ============ */
+
+/* 1. Animação de Pulsação Global */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+/* 2. Efeito de Flutuação */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* 3. Efeito de Brilho */
+@keyframes glow {
+  0% { box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); }
+  50% { box-shadow: 0 0 15px rgba(0, 123, 255, 0.8); }
+  100% { box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); }
+}
+
+/* 4. Efeito de Gradiente Animado */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 5. Efeito de Destaque */
+@keyframes highlight {
+  0% { background-color: rgba(255, 215, 0, 0.1); }
+  50% { background-color: rgba(255, 215, 0, 0.3); }
+  100% { background-color: rgba(255, 215, 0, 0.1); }
+}
+
+/* 6. Rotação 3D Suave */
+@keyframes rotate3d {
+  0% { transform: perspective(1000px) rotateY(0deg); }
+  100% { transform: perspective(1000px) rotateY(360deg); }
+}
+
+/* 7. Efeito de Digitação (para textos) */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* ============ APLICAÇÃO DAS ANIMAÇÕES ============ */
+
+/* Banner Principal - Pulsação */
+.banner h2 {
+  animation: pulse 3s infinite;
+}
+
+/* Cards de Jogos - Flutuação e Destaque */
+.game-card {
+  animation: float 6s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.game-card:hover {
+  animation: none;
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Badge AO VIVO - Pulsação Vermelha */
+.live-badge {
+  animation: pulse 1.5s infinite, glow 2s infinite alternate;
+}
+
+/* Botões Principais - Brilho */
+.btn-primary, .game-play {
+  animation: glow 2s infinite alternate;
+}
+
+/* Seção de Destaque - Gradiente Animado */
+.tournament-highlight {
+  background: linear-gradient(-45deg, var(--secondary-color), var(--dark-color), #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Contador Regressivo - Pulsação nos Números */
+.countdown-number {
+  animation: pulse 2s infinite;
+}
+
+/* Efeito especial para os últimos 10 minutos */
+.last-minutes .countdown-number {
+  animation: pulse 0.5s infinite;
+  color: var(--danger-color);
+}
+
+/* Cards de Jogos em Destaque Aleatório */
+.highlighted {
+  animation: highlight 2s ease, pulse 1.5s infinite;
+}
+
+/* Ícones de Features - Rotação 3D */
+.feature-icon {
+  transition: transform 0.5s ease;
+}
+.feature:hover .feature-icon {
+  animation: rotate3d 4s linear infinite;
+}
+
+/* ============ ANIMAÇÕES RESPONSIVAS ============ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ============ MELHORIAS NAS ANIMAÇÕES EXISTENTES ============ */
+/* Suavizar todas as transições */
+* {
+  transition: all 0.3s ease-out;
+}
+
+/* Efeito de onda nos botões */
+.btn:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10,10);
+  opacity: 0;
+  transition: transform .5s, opacity 1s;
+}
+
+.btn:active:after {
+  transform: scale(0,0);
+  opacity: .3;
+  transition: 0s;
+}
+
+/* Animação de loading para imagens */
+.game-card img {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+    }
+    .ad-mobile {
+        display: block;
+    }
+
+    @keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(0, 123, 255, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 123, 255, 0); }
+}
+
+.ad-highlight {
+  animation: pulse 2s infinite;
+  border-radius: 8px;
+  position: relative;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.ad-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes rotate3d {
+  0% { transform: perspective(1000px) rotateY(0deg); }
+  100% { transform: perspective(1000px) rotateY(360deg); }
+}
+
+.ad-3d {
+  animation: rotate3d 20s linear infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.ad-gradient {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: white;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 5px #007bff; }
+  50% { box-shadow: 0 0 20px #007bff; }
+  100% { box-shadow: 0 0 5px #007bff; }
+}
+
+.ad-glow {
+  animation: glow 2s infinite alternate;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.countdown-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 15px 10px;
+    min-width: 80px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.countdown-number {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #FFD700; /* Dourado */
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.countdown-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.tournament-ended {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.tournament-ended a {
+    color: #FFD700;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.tournament-ended a:hover {
+    text-decoration: underline;
+}
+
+.last-minutes .countdown-number {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.game-card {
+  animation: float 6s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.game-title {
+    position: relative;
+    display: inline-block;
+}
+
+.game-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #FFD700, #FFA500);
+    transition: width 0.3s ease;
+}
+
+.game-card:hover .game-title::after {
+    width: 100%;
+}
+
+.live-badge {
+    animation: pulse 2s infinite;
+    background-color: #FF0000;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 0, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
+}
+
+.game-card img {
+    transition: transform 0.5s ease;
+    transform: scale(1);
+}
+
+.game-card:hover img {
+    transform: scale(1.05);
+}
+
+.game-play {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.game-play::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.game-card:hover .game-play::before {
+    left: 100%;
+}
+
+.game-play:hover {
+    background-color: #0056b3;
+}
+
+.game-card {
+    perspective: 1000px;
+}
+
+.game-card-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.game-card:hover .game-card-inner {
+    transform: rotateY(10deg);
+
+}
+
+.ripple {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+    transform: scale(4); opacity: 0;
+  }
+}
+
+.highlighted {
+  animation: pulse 1s infinite;
+}
+
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-jet-fighter-up"></i>
+                <span>MegaTorneios - RS400 Mil em Jogo</span>
+            </div>
+            <div class="auth-buttons">
+                <button class="btn btn-login" id="loginBtn">Login</button>
+                <button class="btn btn-register" id="registerBtn">Registrar</button>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#inicio"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="#torneios"><i class="fas fa-trophy"></i> Torneios</a></li>
+                <li><a href="#cassino"><i class="fas fa-dice"></i> Cassino</a></li>
+                <li><a href="#esports"><i class="fas fa-gamepad"></i> E-Sports</a></li>
+                <li><a href="#aviator"><i class="fas fa-plane"></i> Aviator</a></li>
+                <li><a href="https://7k.bet.br?ref=37aaa1b9d889"><i class="fas fa-gift"></i> Promoções</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="section live-games" id="esports">
+        <div class="native-ad">
+            <h4>Patrocinado</h4>
+            <a href="https://7k.bet.br?ref=37aaa1b9d889" rel="sponsored noopener noreferrer">
+                <img src="Img/10.png" alt="bonus">
+                <h5>Bet7k</h5>
+                <p>🎉 Bônus de R$20 no primeiro depósito! 🎉</p>
+            </a>
+        </div>
+    </section>
+    
+    <div class="container">
+        <section class="tournament-highlight">
+            <h3>Não perca o maior torneio do ano!</h3>
+            <p>Competição acirrada com prêmios garantidos para os top 100 colocados</p>
+            
+            <div class="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">Dias</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">Horas</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">Minutos</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-label">Segundos</div>
+                </div>
+            </div>
+            
+            <div class="prize-pool">R$ 300.000,00</div>
+            <a href="https://7k.bet.br?ref=37aaa1b9d889" class="btn btn-primary">Inscreva-se Gratuitamente</a>
+        </section>
+        
+        <section class="section" id="inicio">
+            <h2 class="section-title">Bem-vindo ao Torneio Relâmpago Aviator</h2>
+            <p>O Torneio Relâmpago Aviator é o evento mais emocionante do ano, onde os melhores jogadores se enfrentam em partidas eletrizantes com premiação garantida. Participe e mostre suas habilidades para subir no ranking e conquistar prêmios incríveis!</p>
+            
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Grandes Prêmios</h3>
+                    <p>Premiação total de R$300.000 distribuídos entre os melhores colocados.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Pontuação em Dobro</h3>
+                    <p>Durante o torneio, todas as apostas valem o dobro de pontos para o ranking.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>24 Horas de Disputa</h3>
+                    <p>Um dia inteiro de competição intensa e muita adrenalina.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" id="torneios">
+            <h2 class="section-title">Torneios em Destaque</h2>
+            
+            <div class="categories">
+                <div class="category active">Todos</div>
+                <div class="category">Aviator</div>
+                <div class="category">Cassino</div>
+                <div class="category">E-Sports</div>
+                <div class="category">Blackjack</div>
+            </div>
+            
+            <table class="tournament-leaderboard">
+                <thead>
+                    <tr>
+                        <th>Posição</th>
+                        <th>Jogador</th>
+                        <th>Pontuação</th>
+                        <th>Prêmio</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="player-rank">1º</td>
+                        <td class="player-name">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Player 1" class="player-avatar">
+                            <span>JoãoSilva23</span>
+                        </td>
+                        <td>15,820</td>
+                        <td>R$ 50.000</td>
+                        <td><a href="https://7k.bet.br?ref=37aaa1b9d889" class="game-play">Participar</a></td>
+                    </tr>
+                    <tr>
+                        <td class="player-rank">2º</td>
+                        <td class="player-name">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Player 2" class="player-avatar">
+                            <span>MariaAposta</span>
+                        </td>
+                        <td>14,750</td>
+                        <td>R$ 30.000</td>
+                        <td><a href="https://7k.bet.br?ref=37aaa1b9d889" class="game-play">Participar</a></td>
+                    </tr>
+                    <tr>
+                        <td class="player-rank">3º</td>
+                        <td class="player-name">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Player 3" class="player-avatar">
+                            <span>BetKing</span>
+                        </td>
+                        <td>13,980</td>
+                        <td>R$ 20.000</td>
+                        <td><a href="https://7k.bet.br?ref=37aaa1b9d889" class="game-play">Participar</a></td>
+                    </tr>
+                    <tr>
+                        <td class="player-rank">4º</td>
+                        <td class="player-name">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Player 4" class="player-avatar">
+                            <span>LuckyGirl</span>
+                        </td>
+                        <td>12,450</td>
+                        <td>R$ 15.000</td>
+                        <td><a href="https://7k.bet.br?ref=37aaa1b9d889" class="game-play">Participar</a></td>
+                    </tr>
+                    <tr>
+                        <td class="player-rank">5º</td>
+                        <td class="player-name">
+                            <img src="Img/download (1).jpeg" alt="Player 4" class="player-avatar">
+                            <span>makGirl</span>
+                        </td>
+                        <td>12,450</td>
+                        <td>R$ 15.000</td>
+                        <td><a href="https://7k.bet.br?ref=37aaa1b9d889" class="game-play">Participar</a></td>
+                    </tr>
+                        <td class="player-rank">5º</td>
+                        <td class="player-name">
+                            <img src="https://randomuser.me/api/portraits/men/91.jpg" alt="Player 6" class="player-avatar">
+                            <span>JackWinner</span>
+                        </td>
+                        <td>11,230</td>
+                        <td>R$ 10.000</td>
+                        <td><a href="https://7k.bet.br?ref=37aaa1b9d889" class="game-play">Participar</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        </section>
+        <section class="section live-games" id="esports">
+            <div class="native-ad">
+                <h4>Patrocinado</h4>
+                <a href="https://7k.bet.br?ref=37aaa1b9d889" rel="sponsored noopener noreferrer">
+                    <img src="Img/10.png" alt="bonus">
+                    <h5>Bet7k</h5>
+                    <p>🎉 Bônus de R$20 no primeiro depósito! 🎉</p>
+                </a>
+            </div>
+        </section>
+        
+        <section class="section" id="cassino">
+            <h2 class="section-title">Jogos de Cassino</h2>
+            <p>Os melhores jogos de cassino para você se divertir e acumular pontos para o torneio.</p>
+            
+            <div class="games-grid">
+                <div class="game-card">
+                    <img src="Img/download.jpeg" alt="Fortune Tiger">
+                    <div class="game-info">
+                        <h3 class="game-title">Fortune Tiger</h3>
+                        <p class="game-category">Caça-níqueis</p>
+                        <a href="https://7k.bet.br?ref=37aaa1b9d889" class="game-play">Jogar Agora</a>
+                    </div>
+                    <div class="ad-sponsor">
+                        <a href="https://parceiro.com" target="_blank" rel="sponsored noopener noreferrer">
+                            <img src="banner-parceiro.jpg" alt="Patrocinador" style="width:100%; max-width:728px; margin:0 auto;">
+                        </a>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="Img/images (3).jpeg" alt="Fortune Rabbit">
+                    <div class="game-info">
+                        <h3 class="game-title">Fortune Rabbit</h3>
+                        <p class="game-category">Caça-níqueis</p>
+                        <a href="https://7k.bet.br?ref=37aaa1b9d889" class="game-play">Jogar Agora</a>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="Img/images (2).jpeg" alt="Fortune Dragon">
+                    <div class="game-info">
+                        <h3 class="game-title">Fortune Dragon</h3>
+                        <p class="game-category">Caça-níqueis</p>
+                        <a href="https://7k.bet.br?ref=37aaa1b9d889" class="game-play">Jogar Agora</a>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="Img/images.jpeg" alt="Big Bass Splash">
+                    <div class="game-info">
+                        <h3 class="game-title">Big Bass Splash</h3>
+                        <p class="game-category">Caça-níqueis</p>
+                        <a href="https://7k.bet.br?ref=37aaa1b9d889" class="game-play">Jogar Agora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" id="aviator">
+            <h2 class="section-title">Aviator e Jogos de Alta Adrenalina</h2>
+            <p>Os jogos mais emocionantes com maior potencial de ganhos para o torneio.</p>
+            
+            <div class="games-grid">
+                <div class="game-card">
+                    <img src="Img/images (1).jpeg" alt="Aviator">
+                    <div class="game-info">
+                        <h3 class="game-title">Aviator</h3>
+                        <p class="game-category">Multiplicador</p>
+                        <a href="https://7k.bet.br?ref=37aaa1b9d889" class="game-play">Jogar Agora</a>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="Img/download (2).jpeg" alt="Spaceman">
+                    <div class="game-info">
+                        <h3 class="game-title">Spaceman</h3>
+                        <p class="game-category">Multiplicador</p>
+                        <a href="https://7k.bet.br?ref=37aaa1b9d889" class="game-play">Jogar Agora</a>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="Img/images (5).jpeg" alt="Mines">
+                    <div class="game-info">
+                        <h3 class="game-title">Mines</h3>
+                        <p class="game-category">Estratégia</p>
+                        <a href="https://7k.bet.br?ref=37aaa1b9d889" class="game-play">Jogar Agora</a>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="Img/images (6).jpeg" alt="Wild Bounty Showdown">
+                    <div class="game-info">
+                        <h3 class="game-title">Wild Bounty Showdown</h3>
+                        <p class="game-category">Caça-níqueis</p>
+                        <a href="https://7k.bet.br?ref=37aaa1b9d889" class="game-play">Jogar Agora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section live-games" id="esports">
+            <div class="native-ad">
+                <h4>Patrocinado</h4>
+                <a href="https://7k.bet.br?ref=37aaa1b9d889" rel="sponsored noopener noreferrer">
+                    <img src="Img/10.png" alt="bonus">
+                    <h5>Bet7k</h5>
+                    <p>bonus 20R$ por registro</p>
+                </a>
+            </div>
+            <h2 class="section-title">Jogos ao Vivo e E-Sports</h2>
+            <p>Participe de torneios de e-sports e jogos ao vivo com dealers reais.</p>
+            
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="live-badge">AO VIVO</div>
+                    <img src="Img/download (4).jpeg" alt="Blackjack VIP">
+                    <div class="game-info">
+                        <h3 class="game-title">Blackjack Platinum VIP</h3>
+                        <p class="game-category">Cartas - Limite Alto</p>
+                        <a href="https://7k.bet.br?ref=37aaa1b9d889" class="game-play">Entrar</a>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="live-badge">AO VIVO</div>
+                    <img src="Img/images (4).jpeg" alt="Roleta VIP">
+                    <div class="game-info">
+                        <h3 class="game-title">Roleta Premier</h3>
+                        <p class="game-category">Roleta - Limite Alto</p>
+                        <a href="https://7k.bet.br?ref=37aaa1b9d889" class="game-play">Entrar</a>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="live-badge">AO VIVO</div>
+                    <img src="Img/download (5).jpeg" alt="Poker VIP">
+                    <div class="game-info">
+                        <h3 class="game-title">Poker Diamond</h3>
+                        <p class="game-category">Poker - Limite Alto</p>
+                        <a href="https://7k.bet.br?ref=37aaa1b9d889" class="game-play">Entrar</a>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="Img/download (6).jpeg" alt="CS:GO Torneio">
+                    <div class="game-info">
+                        <h3 class="game-title">CS:GO Championship</h3>
+                        <p class="game-category">E-Sports - Torneio</p>
+                        <a href="https://7k.bet.br?ref=37aaa1b9d889" class="game-play">Inscrever-se</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>7K BET</h3>
+                <p>A melhor plataforma de torneios e jogos online com grandes prêmios e diversão garantida.</p>
+                <div class="social-links">
+                    <a href="https://7k.bet.br?ref=37aaa1b9d889"><i class="fab fa-entra-E"></i></a>
+                    <a href="https://7k.bet.br?ref=37aaa1b9d889"><i class="fab fa-Premium"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Links Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Torneios</a></li>
+                    <li><a href="#">Cassino</a></li>
+                    <li><a href="#">E-Sports</a></li>
+                    <li><a href="#">Promoções</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Suporte</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Bonus</h3>
+                <div class="Bonus esclusivo">
+                    <img src="https://via.placeholder.com/50x30?text=Visa" alt="">
+                    <img src="https://via.placeholder.com/50x30?text=Mastercard" alt="">
+                    <img src="https://via.placeholder.com/50x30?text=Pix" alt="mais">
+                </div>
+                <h3 style="margin-top: 1.5rem;">Segurança</h3>
+                <div class="ganhe mais">
+                    <img src="https://via.placeholder.com/50x30?text=SSL" alt="">
+                    <img src="https://via.placeholder.com/50x30?text=RG" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 7K BET. Todos os direitos reservados. | 18+ Jogue com responsabilidade.</p>
+        </div>
+    </footer>
+    
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title">Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">E-mail</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Senha</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="form-submit">Entrar</button>
+            </form>
+            <p style="margin-top: 1rem; text-align: center;">
+                Não tem uma conta? <a href="#" id="switchToRegister" style="color: var(--primary-color);">Registre-se</a>
+            </p>
+        </div>
+    </div>
+    
+    <!-- Register Modal -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title">Registrar</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="registerName">Nome Completo</label>
+                    <input type="text" id="registerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">E-mail</label>
+                    <input type="email" id="registerEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Senha</label>
+                    <input type="password" id="registerPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerConfirmPassword">Confirmar Senha</label>
+                    <input type="password" id="registerConfirmPassword" required>
+                </div>
+                <button type="submit" class="form-submit">Criar Conta</button>
+            </form>
+            <p style="margin-top: 1rem; text-align: center;">
+                Já tem uma conta? <a href="#" id="switchToLogin" style="color: var(--primary-color);">Faça login</a>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const tournamentDate = new Date();
+            tournamentDate.setDate(now.getDate() + 3); // Set tournament to 3 days from now
+            
+            const diff = tournamentDate - now;
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = Math.floor(hours).toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Modal functionality
+        const loginBtn = document.getElementById('loginBtn');
+        const registerBtn = document.getElementById('registerBtn');
+        const loginModal = document.getElementById('loginModal');
+        const registerModal = document.getElementById('registerModal');
+        const closeButtons = document.querySelectorAll('.close-modal');
+        const switchToRegister = document.getElementById('switchToRegister');
+        const switchToLogin = document.getElementById('switchToLogin');
+        
+        loginBtn.addEventListener('click', () => {
+            loginModal.style.display = 'flex';
+            registerModal.style.display = 'none';
+        });
+        
+        registerBtn.addEventListener('click', () => {
+            registerModal.style.display = 'flex';
+            loginModal.style.display = 'none';
+        });
+        
+        switchToRegister.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginModal.style.display = 'none';
+            registerModal.style.display = 'flex';
+        });
+        
+        switchToLogin.addEventListener('click', (e) => {
+            e.preventDefault();
+            registerModal.style.display = 'none';
+            loginModal.style.display = 'flex';
+        });
+        
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                loginModal.style.display = 'none';
+                registerModal.style.display = 'none';
+            });
+        });
+        
+        window.addEventListener('click', (e) => {
+            if (e.target === loginModal) {
+                loginModal.style.display = 'none';
+            }
+            if (e.target === registerModal) {
+                registerModal.style.display = 'none';
+            }
+        });
+        
+        // Form submission
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Login realizado com sucesso!');
+            loginModal.style.display = 'none';
+        });
+        
+        document.getElementById('registerForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Conta criada com sucesso! Bem-vindo ao 7K BET.');
+            registerModal.style.display = 'none';
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+
+                // Rotaciona anúncios a cada 5 segundos
+let currentAd = 0;
+const ads = document.querySelectorAll('.ad-rotating');
+
+function rotateAds() {
+  ads.forEach(ad => ad.style.display = 'none');
+  currentAd = (currentAd + 1) % ads.length;
+  ads[currentAd].style.display = 'block';
+  setTimeout(rotateAds, 5000);
+}
+
+
+if(ads.length > 0) {
+  rotateAds();
+}
+
+const typedAds = document.querySelectorAll('.ad-typed');
+
+typedAds.forEach(ad => {
+  const text = ad.getAttribute('data-text');
+  let i = 0;
+  
+  function typeWriter() {
+    if (i < text.length) {
+      ad.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 50);
+    }
+  }
+  
+  typeWriter();
+});
+
+if (diff < 3600000 && !localStorage.getItem('1hNotified')) {
+    alert('Falta apenas 1 hora para o torneio começar!');
+    localStorage.setItem('1hNotified', 'true');
+}
+
+if (diff < 600000) { // 10 minutos em milissegundos
+    document.querySelector('.countdown').classList.add('last-minutes');
+}
+
+// Destaque aleatório nos cards
+function highlightRandomCard() {
+    const cards = document.querySelectorAll('.game-card');
+    const randomCard = cards[Math.floor(Math.random() * cards.length)];
+    
+    randomCard.classList.add('highlighted');
+    setTimeout(() => {
+        randomCard.classList.remove('highlighted');
+    }, 2000);
+}
+
+setInterval(highlightRandomCard, 5000);
+            });
+
+            // Destaque aleatório nos cards de jogo
+function highlightRandomCard() {
+  const cards = document.querySelectorAll('.game-card');
+  // Remove destaque anterior
+  cards.forEach(card => card.classList.remove('auto-highlight'));
+  
+  // Adiciona em um card aleatório
+  if(cards.length > 0) {
+    const randomIndex = Math.floor(Math.random() * cards.length);
+    cards[randomIndex].classList.add('auto-highlight');
+    
+    // Mantém por 5 segundos e depois repete
+    setTimeout(() => {
+      cards[randomIndex].classList.remove('auto-highlight');
+      setTimeout(highlightRandomCard, 2000);
+    }, 5000);
+  }
+}
+
+// Inicia após 3 segundos
+setTimeout(highlightRandomCard, 3000);
+
+// Efeito de onda nos botões
+document.querySelectorAll('.btn, .game-play').forEach(button => {
+  button.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    // Cria efeito visual
+    const x = e.pageX - this.getBoundingClientRect().left;
+    const y = e.pageY - this.getBoundingClientRect().top;
+    
+    const ripple = document.createElement('span');
+    ripple.classList.add('ripple-effect');
+    ripple.style.left = x + 'px';
+    ripple.style.top = y + 'px';
+    
+    this.appendChild(ripple);
+    
+    // Remove após animação
+    setTimeout(() => ripple.remove(), 1000);
+    
+    // Segue com o link (remove se não quiser)
+    setTimeout(() => window.location.href = this.href, 500);
+  });
+
+
+});
+        });
+    </script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-SEU_ID_DO_ADSENSE"
+     crossorigin="anonymous"></script>
+     <script>
+        // Configura a data final do torneio (ano, mês-1, dia, hora, minuto)
+        const tournamentDate = new Date();
+        tournamentDate.setDate(tournamentDate.getDate() + 3); // 3 dias a partir de agora
+        tournamentDate.setHours(18, 0, 0, 0); // Define para as 18:00
+    
+        function updateCountdown() {
+            const now = new Date();
+            const diff = tournamentDate - now;
+            
+            // Cálculos do tempo restante
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            // Atualiza os elementos HTML
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            
+            // Se o tempo acabou
+            if (diff < 0) {
+                clearInterval(countdownInterval);
+                document.querySelector('.countdown').innerHTML = '<div class="tournament-ended">O torneio começou! <a href="#inscreva">Participe agora</a></div>';
+            }
+        }
+    
+        // Atualiza a cada segundo
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown(); // Chama imediatamente para evitar atraso inicial
+    </script>
+    <script>
+        // Destaque aleatório nos cards
+        function highlightRandomCard() {
+            const cards = document.querySelectorAll('.game-card');
+            const randomCard = cards[Math.floor(Math.random() * cards.length)];
+            
+            randomCard.classList.add('highlighted');
+            setTimeout(() => {
+                randomCard.classList.remove('highlighted');
+            }, 2000);
+        }
+        
+        // Inicia após 3 segundos e repete a cada 5 segundos
+        setTimeout(() => {
+            highlightRandomCard();
+            setInterval(highlightRandomCard, 5000);
+        }, 3000);
+    </script>
+    <script>
+        // Destaque aleatório nos cards
+        function highlightRandomCard() {
+          const cards = document.querySelectorAll('.game-card');
+          cards.forEach(card => card.classList.remove('highlighted'));
+          
+          if(cards.length > 0) {
+            const randomCard = cards[Math.floor(Math.random() * cards.length)];
+            randomCard.classList.add('highlighted');
+            
+            setTimeout(() => {
+              randomCard.classList.remove('highlighted');
+              setTimeout(highlightRandomCard, 5000);
+            }, 3000);
+          }
+        }
+        
+        // Inicia as animações após o carregamento
+        window.addEventListener('DOMContentLoaded', () => {
+          highlightRandomCard();
+          
+          // Efeito ripple em todos os botões
+          document.querySelectorAll('.btn, .game-play').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+              const ripple = document.createElement('span');
+              ripple.className = 'ripple-effect';
+              this.appendChild(ripple);
+              
+              // Posiciona o ripple onde foi clicado
+              const rect = this.getBoundingClientRect();
+              ripple.style.left = (e.clientX - rect.left) + 'px';
+              ripple.style.top = (e.clientY - rect.top) + 'px';
+              
+              // Remove após a animação
+              setTimeout(() => ripple.remove(), 600);
+            });
+          });
+        });
+        </script>
+</body>
+</html>
